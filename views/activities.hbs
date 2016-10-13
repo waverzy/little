@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Little</title>
+    <!--初始化样式-->
+    <link rel="stylesheet" href="/css/base.css"/>
+    <!--f7的样式-->
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <!--字体文件样式-->
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <!--自定义样式-->
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body style="-webkit-overflow-scrolling: touch">
+<div class="view view-main" id="goods_box">
+    <div class="navbar cur_navbar">
+        <div class="navbar-inner">
+            <div class=" navbar-tabs">
+                <div class="buttons-row" style="width: 100%;height: 100%;">
+                    <a href="#tab1" class="button tab-link">全部年龄<i class="icon icon_down"></i></a>
+                    <a href="#tab2" class="button tab-link">全部类别<i class="icon icon_down"></i></a>
+                    <a href="#tab3" class="button tab-link">综合排序<i class="icon icon_down"></i></a>
+                    <a href="#tab4" class="button tab-link">全部能力<i class="icon icon_down"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mask" style=""></div>
+    <div class="panel_1">
+        <div class="tabs">
+            <div id="tab1" class="tab">
+                <div class="list-block tablet-inset">
+                    <ul class="age_category">
+                        <li class="default checked">
+                            <a href="#">All</a>
+                            <input type="hidden" name="beginAge" value="0"/>
+                            <input type="hidden" name="endAge" value="100"/>
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">0-1岁</a>
+                            <input type="hidden" name="beginAge" value="0"/>
+                            <input type="hidden" name="endAge" value="1"/>
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">1-3岁</a>
+                            <input type="hidden" name="beginAge" value="1"/>
+                            <input type="hidden" name="endAge" value="3"/>
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">3-6岁</a>
+                            <input type="hidden" name="beginAge" value="3"/>
+                            <input type="hidden" name="endAge" value="6"/>
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">6-12岁</a>
+                            <input type="hidden" name="beginAge" value="6"/>
+                            <input type="hidden" name="endAge" value="12"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tab2" class="tab">
+                <div class="list-block tablet-inset">
+                    <ul class="type_category">
+                        <li class="default checked">All<input type="hidden" name="type" value="0"/></li>
+                        <li class="noneDefault">课程培训<input type="hidden" name="type" value="1"/></li>
+                        <li class="noneDefault">参观展览<input type="hidden" name="type" value="2"/></li>
+                        <li class="noneDefault">动手体验<input type="hidden" name="type" value="3"/></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tab3" class="tab">
+                <div class="list-block tablet-inset">
+                    <ul class="sort_category">
+                        <li class="default checked">综合排序<input type="hidden" name="sort" value="0"/></li>
+                        <li class="noneDefault">人气最高<input type="hidden" name="sort" value="1"/></li>
+                        <li class="noneDefault">最新上架<input type="hidden" name="sort" value="2"/></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tab4" class="tab">
+                <div class="content-block" style="background-color: #fff;">
+                    <ul class="ability_category">
+                        <li class="default checked">
+                            <a href="#">全部能力</a>
+                            <input type="hidden" name="ability" value="0">
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">人际社交</a>
+                            <input type="hidden" name="ability" value="1">
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">数学逻辑</a>
+                            <input type="hidden" name="ability" value="2">
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">想象创造</a>
+                            <input type="hidden" name="ability" value="3">
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">空间思维</a>
+                            <input type="hidden" name="ability" value="4">
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">音乐智能</a>
+                            <input type="hidden" name="ability" value="5">
+                        </li>
+                        <li class="noneDefault">
+                            <a href="#">语言表达</a>
+                            <input type="hidden" name="ability" value="6">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                加载中...
+            </p>
+        </div>
+    </div>
+    <div class="pages navbar-through">
+        <div data-page="activities" class="page varity">
+            <div class="page-content infinite-scroll">
+                <section class="smooth-content-list" style=" overflow: hidden;">
+                    <div class="find-search">
+                        <div class="find-search-box catch"></div>
+                        <div class="find-search-boxes">
+                            <div class="find-search-condition">
+                                <label class="find_search_class" id="find-searches">搜索------------</label>
+                                <i class="icon_find_close" style="display: none;"></i>
+                            </div>
+                            <input type="hidden" id="cur_search_id" value=""/>
+                        </div>
+                    </div>
+                    <div class="list-block media-list">
+                        <ul class="item_list" style="margin-top: 0;">
+                        </ul>
+                        <div class="load-more" style="display:none">加载更多</div>
+                        <input type="hidden" id="commentCount"/>
+                        <!-- 加载提示符 -->
+                        <div class="infinite-scroll-preloader" style="display: none;">
+                            <div class="preloader"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--尾部-->
+            <div class="toolbar tabbar tabbar-labels">
+                <div class="toolbar-inner">
+                    <a href="/" class="tab-link external index_home">
+                        <i class="icon demo-icon-1"></i>
+                        <span class="tabbar-label">首页</span>
+                    </a>
+                    <a href="activities" class="tab-link active external choose_toy">
+                        <i class="icon demo-icon-2"></i>
+                        <span class="tabbar-label">找活动</span>
+                    </a>
+                    <a href="wishes.html" class="tab-link external wishes">
+                        <i class="icon demo-icon-3">
+                            <!--<span class="wish_num "></span>-->
+                        </i>
+                        <span class="tabbar-label">找活动</span>
+                    </a>
+                    <a href="mine" class="tab-link external mine">
+                        <i class="icon demo-icon-5"><span class="nread "></span></i>
+                        <span class="tabbar-label">我的</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<!--lodash基础类-->
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<!--f7-->
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<!--require.js-->
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<!--自定义的定数-->
+<script type="text/javascript" src="/js/contant.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.lazyload.min.js"></script>
+<script>
+    var myApp = new Framework7();
+    var $$ = $;
+    var user_id = localStorage.getItem('mobile');
+    var keyword = $('#cur_search_id').val();
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(decodeURI(r[2]));
+        return null; //返回参数值
+    }
+    // 每次加载添加多少条目
+    var itemsPerLoad = 10;
+    // 注册'infinite'事件处理函数
+    // 加载flag
+    var loading = false;
+
+    $$('.infinite-scroll').scroll(function () {
+        var ul_height = $$('.item_list').height();
+        var li_height = $$('.is_li').height() * 8;
+        if ($$(this)[0].scrollTop > ul_height - li_height) {
+            if (loading) {
+                $$('.load-more').css('display', 'block');
+                return;
+            } else {
+                $$('.load-more').css('display', 'none');
+                loading = true;
+            }
+
+            var lastIndex = $$('.item_list').find('.is_li').length;
+            var params = localStorage.getItem('varity_params');
+            params = $$.parseJSON(params);
+            params.index = lastIndex;
+
+            var maxItems = $$('#commentCount').val();
+            var char = '';
+
+            // 重置加载flag
+            if (lastIndex >= maxItems) {
+                // 加载完毕，则注销无限加载事件，以防不必要的加载
+                myApp.detachInfiniteScroll($$('.infinite-scroll'));
+                // 删除加载提示符
+                $$('.infinite-scroll-preloader').hide();
+                loading = false;
+                $$('.load-more').text('已到页尾');
+                $$('.load-more').css('display', 'none');
+                return;
+            }
+            $$.ajax({
+                type: 'POST',
+                url: '/activities',
+                cache: false,
+                data: params,
+                success: function (output) {
+                    if (output.msg == 'success') {
+                        var item = output.data.activities || [];
+                        $$.each(item, function (k, v) {
+                            char += '<li class="is_li">' +
+                                    '<div class="item-content">' +
+                                    "<a onclick=\"item_link('activityDetail?activityId="+v['activityId']+"')\" class=\"item-link external\">" +
+                                    '<div class="item-media">';
+                            char += '<img class="lazy" data-original=' + v['mainPicture'] +' onerror="onerror=null;src=\'http://o6zo3xy1k.bkt.clouddn.com/favicon.png\''+img_ios320+'">';
+
+                            char +=
+                                    '</div>' +
+                                    '</a>' + '<div class="item-inner">' +
+                                    "<a onclick=\"item_link('activityDetail?activityId="+v['activityId']+"')\" class=\"item-link external\">" +
+                                    '<div class="item-title-row">' + '<div class="item-title">' + v['title'] + '</div>' +
+                                    '</div><div class="item-subtitle">活动时间：' + v['time'].slice(0,-3) + '</div>' + '<div class="p-outer"><div class="p-bar"><div style="background-color:blue; height: 8px; width:' + Math.round(v['currentNum']*100/v['limitNum']) + '%"></div>' +
+                                    '</div></div><div class="p-i-infos"><div class="fore1"><div class="num">' + v['currentNum'] + '/' +v['limitNum'] + '</div><div class="p-num">已报名</div></div>' +
+                                    '<div class="fore2"><div class="num">' + compute_leftTime(v['deadline']) + '</div><div class="p-num">剩余时间</div></div><div class="fore3"><div class="num">' + v['price'] +
+                                    '</div><div class="p-num">活动价格</div></div></div></a></div></div></li>';
+                        });
+                        // 添加新条目
+                        $$('.item_list').append(char);
+
+                        $$("img.lazy").lazyload({
+                            threshold: 200,
+                            placeholder: "http://o6zo3xy1k.bkt.clouddn.com/lazyload2.png",
+                            container: $$(".page-content")
+                        });
+                        loading = false;
+                    } else {
+                        loading = false;
+                    }
+                },
+                error: function (output) {
+                    loading = false;
+                }
+            });
+            // 更新最后加载的序号
+            lastIndex = $$('.item_list').find('.is_li').length + 10;
+        }
+    });
+
+    function item_link(cur_link) {
+        localStorage.setItem('activities_scolltop', $$('.page-content').scrollTop());
+        location.href = cur_link;
+    }
+    function compute_leftTime(time) {
+        var deadline = new Date(time);
+        var currentTime = new Date();
+        var leftTime = deadline.getTime() - currentTime.getTime();
+        var leftDays = Math.floor(leftTime/(24*3600*1000));
+        if(leftDays == 0) {
+            var leftHours = Math.floor(leftTime/(3600*1000));
+            if(leftHours == 0) {
+                var leftMinutes = Math.floor(leftTime/(60*1000));
+                if(leftMinutes == 0) {
+                    var leftSeconds = Math.floor(leftTime/1000);
+                    if(leftSeconds == 0) {
+                        return "已截止";
+                    }
+                    return leftMinutes + "秒";
+                }
+                return leftMinutes + "分钟";
+            }
+            return leftHours + "小时";
+        } else if(leftDays > 0) {
+            return leftDays + "天";
+        } else {
+            return "已截止";
+        }
+    }
+
+</script>
+</body>
+</html>

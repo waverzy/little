@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>我的</title>
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+
+<body>
+<div class="view view-main" id="mine">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="help" class="link external contact_service">联系客服</a></div>
+            <div class="center">我的</div>
+            <div class="right">
+                <a href="message" class="link external message_code"><span class="nread "></span></a>
+            </div>
+        </div>
+    </div>
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                内容加载中...
+            </p>
+        </div>
+    </div>
+    <div class="pages  navbar-through toolbar-through">
+        <div class="page" data-page="mine">
+            <div class="page-content">
+                <div class="mine-top">
+                    <div class="mine_title list-block media-list">
+                        <a href="userInfo" class="external link item-content" id="userBaseInfo">
+
+                        </a>
+                    </div>
+                </div>
+                <div class="mine_wallet">
+                    <div class="list-block mine_set">
+                        <ul>
+                            <li>
+                                <a href="orderManage" class="item-link item-content link external address_code">
+                                    <div class="item-media"><i class="icon icon_mine_address"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">订单管理</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="expenseCalendar"
+                                   class="item-link item-content link external expense_code">
+                                    <div class="item-media"><i class="icon icon_mine_consume"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">个人资料</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings" class="item-link item-content link external settings_code">
+                                    <div class="item-media"><i class="icon icon_mine_set"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">设置</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content link external logout">
+                                    <div class="item-media"><i class="icon icon_mine_set"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">退出登录</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block mine_help">
+                        <ul>
+                            <li>
+                                <a href="question" class="external item-link item-content question_code">
+                                    <div class="item-media"><i class="icon icon_mine_help"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">常见问题</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="aboutUs" class="external item-link item-content aboutus_code">
+                                    <div class="item-media"><i class="icon icon_mine_about"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title">关于</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--尾部-->
+            <div class="toolbar tabbar tabbar-labels">
+                <div class="toolbar-inner">
+                    <a href="/" class="tab-link  external index_home">
+                        <i class="icon demo-icon-1"></i>
+                        <span class="tabbar-label">首页</span>
+                    </a>
+                    <a href="activities" class="tab-link  external choose_toy">
+                        <i class="icon demo-icon-2"></i>
+                        <span class="tabbar-label">找活动</span>
+                    </a>
+                    <a href="wishes.html" class="tab-link external wishes">
+                        <i class="icon demo-icon-3"> </i>
+                        <span class="tabbar-label">玩具箱</span>
+                    </a>
+                    <a href="mine.html" class="tab-link active external mine">
+                        <i class="icon demo-icon-5"><span class="nread "></span></i>
+                        <span class="tabbar-label">我的</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<script type="text/javascript" src="/js/contant.js"></script>
+</body>
+
+</html>

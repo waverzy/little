@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Little</title>
+    <!--初始化样式-->
+    <link rel="stylesheet" href="/css/base.css"/>
+    <!--f7的样式-->
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <!--字体文件样式-->
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <!--自定义样式-->
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body>
+<div class="views">
+    <div class="view view-main">
+        <div class="navbar navbar_none">
+            <div id="index_navbar" class="navbar-inner">
+                <div class="left"><a href="address.html" class="external address_code">上海<i class="icon"></i></a></div>
+                <div class="center"><a href="hotSearch.html" class="external link hotSearch"><img class="search"/></a>
+                </div>
+                <div class="right"><a href="question.html" class="icon-only external link questionsCode"><i
+                        class="icon icon-bars-blue"></i> </a></div>
+            </div>
+        </div>
+        <div id="preloader">
+            <div id="status">
+                <p class="center-test">加载中...</p>
+            </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+            <div data-page="index" class="page page_index">
+                <div class="page-content page-gap">
+                    <div class="content-block">
+                        <div id="tabl" class="active">
+                            <div class="swiper-container">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-wrapper">
+                                    {{#.}}
+                                        {{#if_eql swiperlist ''}}
+                                            <div class="swiper-slide">
+                                                <a href="javascript:;" class="external" target="_blank">
+                                                    <img src="img/banner_01.png"/>
+                                                </a>
+                                            </div>
+                                        {{else}}
+                                            {{#each swiperlist}}
+                                                <div class="swiper-slide">
+                                                    <a href="{{text_input}}" class="external" target="_blank">
+                                                        <img src="{{imageUrl}}" onerror="{{img_error}}"/>
+                                                    </a>
+                                                </div>
+                                            {{/each}}
+                                        {{/if_eql}}
+                                    {{/.}}
+                                </div>
+                            </div>
+                            <div class="new_service card_expired" style="display: none"></div>
+                            <div class="operate">
+                                <ul>
+                                    <li>
+                                        <a class="new_comer_href external">
+                                            <i class="icon icon_op1"></i>
+                                            <h5>instruction</h5>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="invi_gift_href external">
+                                            <i class="icon icon_op2"></i>
+                                            <h5>invitation</h5>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="consume_promise_href external">
+                                            <i class="icon icon_op3"></i>
+                                            <h5>promise</h5>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rearing_kits_href external">
+                                            <i class="icon icon_op4"></i>
+                                            <h5>kit</h5>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="choose">
+                                <ul>
+                                    <li>
+                                        <a class="toy_group_href external">
+                                            <div class="outofImg"><img class="toy_group_src"/></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="banner">
+                                <div class="banner_title">
+                                    <hr size="1" color="#ccc"/>
+                                    <span>hot service</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a class="new_sync_href external"><img class="new_sync_src"/></a>
+                                    </li>
+                                    <li>
+                                        <a class="baby_party_href external"><img class="baby_party_src"/></a>
+                                    </li>
+                                    <li>
+                                        <a class="history_topic_href external"><img class="history_topic_src"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="seemore"><a href="activities" class="external look_more">see more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toolbar tabbar tabbar-labels">
+                    <div class="toolbar-inner">
+                        <a href="#tab1" class="tab-link active index_home">
+                            <i class="icon demo-icon-1"></i>
+                            <span class="tabbar-label">首页</span>
+                        </a>
+                        <a href="activities" class="tab-link external choose_toy">
+                            <i class="icon demo-icon-2"></i>
+                            <span class="tabbar-label">找活动</span>
+                        </a>
+                        <a href="wishes.html" class="tab-link external wishes">
+                            <i class="icon demo-icon-3">
+                                <!--<span class="wish_num "></span>-->
+                            </i>
+                            <span class="tabbar-label">玩具箱</span>
+                        </a>
+                        <a href="mine" class="tab-link external mine">
+                            <!--<form id="mineForm" method="post" action="mine">
+                                <input type="hidden" name="user_id"/>
+                            </form>-->
+                            <i class="icon demo-icon-5"><span class="nread "></span></i>
+                            <span class="tabbar-label">我的</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<!--lodash基础类-->
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<!--f7-->
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<!--require.js-->
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<!--自定义的定数-->
+<script type="text/javascript" src="/js/contant.js"></script>
+</body>
+</html>

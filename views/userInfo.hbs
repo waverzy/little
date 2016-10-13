@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>个人资料</title>
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+
+<body>
+<div class="view view-main" id="userInfo">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="javascript:history.go(-1);" class="link">
+                    <i class="icon icon_goback"></i>
+                </a>
+            </div>
+            <div class="center">个人资料</div>
+            <div class="right"><a href="#" id="baseInfoSubmit">提交</a></div>
+        </div>
+    </div>
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                内容加载中...
+            </p>
+        </div>
+    </div>
+    <div class="pages  navbar-through toolbar-through">
+        <div class="page" data-page="userInfo">
+            <div class="page-content">
+                <form id="baseInfoForm">
+                    <div id="conBaseInfo">
+                        <div class="data_header row">
+                            <div class="header_img col-100">
+                                <img class="vip_portrait"/>
+                                <input name="avatar" type="hidden" id="avatar">
+                            </div>
+                        </div>
+                        <div class="data_input list-block">
+                            <div class="input_nickname item-content">
+                                <div class="item-media">昵称</div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" onClick="this.select();" onFocus="this.select();"
+                                               name="nickname" id="phone" placeholder="请填写昵称"/>
+                                        <input type="hidden" name="user_id" value="{{user_id}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input_name item-content">
+                                <div class="item-media">姓名</div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" onClick="this.select();" onFocus="this.select();" name="name"
+                                               id="phone" placeholder="请填写宝贝姓名"/>
+                                        <input type="hidden" name="user_id" value="{{user_id}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="item-link smart-select" data-open-in="picker"
+                               data-picker-close-text="完成">
+                                <div class="select sex item-content">
+                                    <select name="sex">
+                                        <option value="男">男</option>
+                                        <option value="女">女</option>
+                                    </select>
+                                    <div class="item-media">性别</div>
+                                    <div class="item-inner">
+                                        <div class="item-after"></div>
+                                        <!-- <div class="item-input">
+                                            <a href="#" class="item-link smart-select" data-open-in="picker"
+                                               data-picker-close-text="完成">
+                                                select -->
+                                        <!--<select name="sex">
+                                            <option value="1" selected>男</option>
+                                            <option value="0">女</option>
+                                        </select>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>-->
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="item-link smart-select" data-open-in="picker"
+                               data-picker-close-text="完成">
+                                <div class="select age item-content">
+                                    <select name="age">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <div class="item-media">年龄</div>
+                                    <div class="item-inner">
+                                        <div class="item-after"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<script type="text/javascript" src="/js/contant.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css">
+    <link rel="stylesheet" href="/css/lib/ionicons.css">
+    <link rel="stylesheet" href="/css/app.css"/>
+    <!--shortcut icon-->
+    <!--<link href="img/favicon.png" rel="shortcut icon">-->
+</head>
+
+<body>
+
+<div class="view view-main" id="register">
+    <div class="navbar navbar_none">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="login" class="link external">
+                    <i class="icon icon_goback"></i>
+                </a>
+            </div>
+            <div class="center">注册</div>
+            <div class="right"></div>
+        </div>
+    </div>
+
+    <div class="pages navbar-through">
+        <div data-page="register" class="page ">
+            <div class="page-content page-gap">
+                <form method="post" id="register-form">
+                    <div class="register-info">
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media img-phone"></div>
+                                        <div class="item-inner">
+                                            <div class="item-input">
+                                                <input type="text" name="mobile" class="mobile" maxlength="11" placeholder="手机号码">
+                                            </div>
+                                            <div class="mobile-after item-after"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media img-code"></div>
+                                        <div class="item-inner yzm">
+                                            <div class="item-input">
+                                                <input type="text" name="msgcode" class="msgcode" placeholder="短信验证码">
+                                                <input type="hidden" name="send_code" class="send_code">
+                                            </div>
+                                            <div class="msgcode-after item-after"></div>
+                                            <div class="yzm-code">
+                                                <span class="second" style="cursor: pointer;">获取验证码</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-media img-password"></div>
+                                        <div class="item-inner">
+                                            <div class="item-input">
+                                                <input maxlength="16" type="password" name="password" class="password"
+                                                       placeholder="6-16位密码">
+                                            </div>
+                                            <div class="password-after item-after"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="password-btn">
+                        <a href="#" class="bigbtn submit_register">提交</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<script type="text/javascript" src="/js/contant.js"></script>
+<script>
+    //删除手机号码
+    $('.mobile-after').on('click', function () {
+        $('.mobile').val('');
+    });
+    //删除短信验证码
+    $('.msgcode-after').on('click', function () {
+        $('.msgcode').val('');
+    });
+    //删除密码
+    $('.password-after').on('click', function () {
+        $('.password').val('');
+    });
+</script>
+
+</body>
+
+</html>

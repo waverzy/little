@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>订单支付</title>
+    <!--初始化样式-->
+    <link rel="stylesheet" href="/css/base.css"/>
+    <!--f7的样式-->
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <!--字体文件样式-->
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <!--自定义样式-->
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body>
+<div class="view view-main" id="orderPay">
+    <div class="navbar navbar_none">
+        <div class="navbar-inner">
+            <div class="left"><a href="javascript:history.go(-1);" class="link"><i class="icon icon_back"></i></a></div>
+            <div class="center">订单支付</div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <div id="preloader" style="display:none;">
+        <div id="status">
+            <p class="center-text">
+                内容加载中...
+            </p>
+        </div>
+    </div>
+    <div class="pages navbar-through">
+        <div data-page="orderPay" class="page ">
+            <div class="page-content page-gap">
+                <div class="orderpay-cash">
+                    <div class="list-block media-list" style="margin: 0 0 35px 0">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">姓名</div>
+                                    <div class="item-after">
+                                        <div class="item-input">
+                                            <input type="text" name="name" class="name">
+                                        </div>
+                                        <div class="mobile-after item-after"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <a href="#" class="item-link smart-select" data-open-in="picker" data-picker-close-text="完成">
+                                    <!-- select -->
+                                    <select name="sex">
+                                        <option value="1" selected>男</option>
+                                        <option value="0">女</option>
+                                    </select>
+                                    <div class="item-content">
+                                        <div class="item-inner sex">
+                                            <!-- Select label -->
+                                            <div class="item-title">性别</div>
+                                            <div class="item-after">男</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item-content">
+                                <a href="#" class="item-link smart-select" data-open-in="picker" data-picker-close-text="完成">
+                                    <!-- select -->
+                                    <select name="age">
+                                        <option value="0" selected>0</option>
+                                        <option value="0" selected>0</option>
+                                    </select>
+                                    <div class="item-content">
+                                        <div class="item-inner age">
+                                            <!-- Select label -->
+                                            <div class="item-title">年龄</div>
+                                            <!-- Selected value, not required -->
+                                            <div class="item-after">1</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">手机</div>
+                                    <div class="item-after">
+                                        <div class="item-input">
+                                            <input type="text" name="mobile" class="mobile" maxlength="11">
+                                        </div>
+                                        <div class="mobile-after item-after"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">确认手机</div>
+                                    <div class="item-after">
+                                        <div class="item-input">
+                                            <input type="text" name="remobile" class="remobile" maxlength="11">
+                                        </div>
+                                        <div class="mobile-after item-after"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orderpay-way">
+                    <div class="list-block media-list">
+                        <ul>
+                            <li class="zhifu_weixin change_pay_type" data-id="2">
+                                <div class="item-content">
+                                    <div class="item-media wxpay"></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">微信支付</div>
+                                            <div class="item-after">
+                                                <input type="radio" class="weixin" value="weixin"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="display: none" class="zhifu_alipay change_pay_type" data-id="1">
+                                <div class="item-content">
+                                    <div class="item-media zfbpay"></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">支付宝支付</div>
+                                            <div class="item-after">
+                                                <input type="radio" class="zhifubao" value="alipay" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="hidden" class="cur_select_pay_id" value=""/>
+                    </div>
+                </div>
+                <footer class="orderpay-bottom pay_order pay_app_order" id="pay_app">
+                    <a href="#" id="cur_weixin_pay_id">去支付</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div id="mask" style=""></div>
+</div>
+<div id="weixin_qrcode_dialog" class="weixin_popup" style="display: none; left: 0px; top: 294px; width: 240px; height: 292px; position: absolute; z-index: 10000; background-size: 100% 100%; background-image: url(http://pic22.nipic.com/20120726/2034846_132059033375_2.jpg);">
+</div>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<!--lodash基础类-->
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<!--f7-->
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<!--require.js-->
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<!--自定义的定数-->
+<script type="text/javascript" src="/js/contant.js"></script>
+<script type="text/javascript" src="/js/lib/mui.min.js"></script>
+<script>
+
+    var channel=null;
+    window.plus ? plusReady() : document.addEventListener("plusready", plusReady, !1);
+    function plusReady() {
+
+        // 获取支付通道
+        plus.payment.getChannels(function(channels){
+            channel=channels[0];
+        },function(e){
+            alert("获取支付通道失败："+e.message);
+        });
+
+        $('.pay_app_order').removeClass('pay_order');
+        document.getElementById('pay_app').addEventListener('tap', function(event) {
+            go_app_pay();
+        });
+
+    }
+    function go_app_pay(){
+        var cur_select_pay_id = $('.cur_select_pay_id').val();
+        if(cur_select_pay_id == 0 || cur_select_pay_id == '' || cur_select_pay_id == undefined || cur_select_pay_id == null){
+            app.f7.alert('请选择支付方式','温馨提示');
+            return;
+        }else{
+            var pay_type = 'wechat';
+            if(cur_select_pay_id==1){
+                pay_type = 'aliwap';
+            }
+
+            var cur_pay_money = 0;
+            var cur_pay_tid = '';
+
+            $.ajax({
+                type: 'POST',
+                url: SERVER_URL + API_URL + API_Pay_getmoney,
+                cache: false,
+                data: {
+                    id: cur_id,
+                    user_id:user_id
+                },
+                success: function(data_output) {
+
+                    if(data_output.msg=='success'){
+
+                        cur_pay_money = data_output.data.money || 0;
+                        cur_pay_tid = data_output.data.tid;
+                        if(cur_pay_money == 0){
+                            app.f7.alert('数据有误，请重试','温馨提示');
+                            setTimeout(function(){
+                                location.href = 'pay.html';
+                            },2000);
+                        }else{
+                            if(pay_type == 'wechat'){
+
+                                PAYSERVER = SERVER_URL+'payment/wxpayv3/index.php?money='+cur_pay_money+'&tid='+cur_pay_tid;
+                            }else if(pay_type=='aliwap'){
+
+                                PAYSERVER = SERVER_URL + 'payment/alipay/index.php?money='+cur_pay_money+'&tid='+cur_pay_tid;
+                            }
+                            else{
+                                plus.nativeUI.alert("不支持此支付通道！",null,"玩具到家");
+                                return;
+                            }
+                            var xhr = new XMLHttpRequest();
+                            xhr.onreadystatechange = function() {
+                                switch (xhr.readyState) {
+                                    case 4:
+
+                                        if (xhr.status == 200) {
+                                            plus.payment.request(channel, xhr.responseText, function(result) {
+
+
+                                                plus.nativeUI.alert("支付成功！", function() {
+
+                                                    back();
+                                                    location.href = 'memCenter.html';
+                                                });
+                                            }, function(error) {
+                                                plus.nativeUI.alert("支付失败：" + error.code);
+                                            });
+                                        } else {
+                                            alert("获取订单信息失败！");
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            };
+                            xhr.open('GET', PAYSERVER);
+                            xhr.send();
+
+
+                        }
+                    }else{
+                        if(data_output.data.code==41307){
+                            app.f7.alert(data_output.msg,'温馨提示');
+                            setTimeout(function(){
+                                location.href = 'addressAdd.html';
+                            },2000);
+                        }else{
+                            app.f7.alert(data_output.msg,'温馨提示');
+                            setTimeout(function(){
+                                location.href = 'pay.html';
+                            },2000);
+                        }
+
+                    }
+                },
+                error: function(data_output) {
+
+                    if(data_output.data.code==41307){
+                        app.f7.alert(data_output.msg,'温馨提示');
+                        setTimeout(function(){
+                            location.href = 'addressAdd.html';
+                        },2000);
+                    }else{
+                        app.f7.alert(data_output.msg,'温馨提示');
+                        setTimeout(function(){
+                            location.href = 'pay.html';
+                        },2000);
+                    }
+                }
+            });
+        }
+    }
+</script>
+</body>
+
+</html>

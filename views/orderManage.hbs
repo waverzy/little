@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Little</title>
+    <!--初始化样式-->
+    <link rel="stylesheet" href="/css/base.css"/>
+    <!--f7的样式-->
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <!--字体文件样式-->
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <!--自定义样式-->
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body style="-webkit-overflow-scrolling: touch">
+<div class="view view-main orderManage" id="goods_box">
+    <div id="mask" style=""></div>
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                加载中...
+            </p>
+        </div>
+    </div>
+    <div class="pages navbar-through">
+        <div data-page="orderManage" class="page varity">
+            <div class="page-content infinite-scroll">
+                <section class="smooth-content-list" style=" overflow: hidden;">
+                    <div class="list-block media-list">
+                        <ul class="item_list" style="margin-top: 0;">
+                        </ul>
+                        <div class="load-more" style="display:none">加载更多</div>
+                        <input type="hidden" id="commentCount"/>
+                        <!-- 加载提示符 -->
+                        <div class="infinite-scroll-preloader" style="display: none;">
+                            <div class="preloader"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--尾部-->
+            <div class="toolbar tabbar tabbar-labels">
+                <div class="toolbar-inner">
+                    <a href="/" class="tab-link external index_home">
+                        <i class="icon demo-icon-1"></i>
+                        <span class="tabbar-label">首页</span>
+                    </a>
+                    <a href="activities" class="tab-link active external choose_toy">
+                        <i class="icon demo-icon-2"></i>
+                        <span class="tabbar-label">找活动</span>
+                    </a>
+                    <a href="wishes.html" class="tab-link external wishes">
+                        <i class="icon demo-icon-3">
+                            <!--<span class="wish_num "></span>-->
+                        </i>
+                        <span class="tabbar-label">找活动</span>
+                    </a>
+                    <a href="mine" class="tab-link external mine">
+                        <i class="icon demo-icon-5"><span class="nread "></span></i>
+                        <span class="tabbar-label">我的</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<!--lodash基础类-->
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<!--f7-->
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<!--require.js-->
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<!--自定义的定数-->
+<script type="text/javascript" src="/js/contant.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.lazyload.min.js"></script>
+<script>
+    var myApp = new Framework7();
+    var $$ = $;
+    var user_id = localStorage.getItem('user_id');
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(decodeURI(r[2]));
+        return null; //返回参数值
+    }
+    // 每次加载添加多少条目
+    var itemsPerLoad = 10;
+    // 注册'infinite'事件处理函数
+    // 加载flag
+    var loading = false;
+
+    $$('.infinite-scroll').scroll(function () {
+        var ul_height = $$('.item_list').height();
+        var li_height = $$('.is_li').height() * 8;
+        if ($$(this)[0].scrollTop > ul_height - li_height) {
+            if (loading) {
+                $$('.load-more').css('display', 'block');
+                return;
+            } else {
+                $$('.load-more').css('display', 'none');
+                loading = true;
+            }
+
+            var lastIndex = $$('.item_list').find('.is_li').length;
+
+            var maxItems = $$('#commentCount').val();
+            var char = '';
+
+            // 重置加载flag
+            if (lastIndex >= maxItems) {
+                // 加载完毕，则注销无限加载事件，以防不必要的加载
+                myApp.detachInfiniteScroll($$('.infinite-scroll'));
+                // 删除加载提示符
+                $$('.infinite-scroll-preloader').hide();
+                loading = false;
+                $$('.load-more').text('已到页尾');
+                $$('.load-more').css('display', 'none');
+                return;
+            }
+            $$.ajax({
+                type: 'POST',
+                url: '/orderManage',
+                cache: false,
+                data: {index: lastIndex, limit: itemsPerLoad, user_id: user_id},
+                success: function (output) {
+                    if (output.msg == 'success') {
+                        var item = output.data.orders || [];
+                        $$.each(item, function (k, v) {
+                            char += '<li class="is_li"><div class="card"><div class="card-header"><div><a onclick="item_link(\'activityDetail?activityId=' + v['activityId'] + '\')\" class=\"item-link external\">' + v['activityTitle'] + '</a></div><div>' + switchTimeFormat(v['activityTime']) + '</div></div><div class="card-content">' +
+                                    '<div class="card-content-inner"><div>姓名：' + v['name'] + '</div><div>性别：' + v['sex'] + '</div><div>年龄' + v['age'] + '岁</div><div>联系方式：' + v['mobile'] + '</div></div>' +
+                                    '<div class="card-footer">下单时间：' + add8Hours(v['orderTime']) + '</div></div></div></li>';
+                        });
+                        // 添加新条目
+                        $$('.item_list').append(char);
+
+                        $$("img.lazy").lazyload({
+                            threshold: 200,
+                            placeholder: "http://o6zo3xy1k.bkt.clouddn.com/lazyload2.png",
+                            container: $$(".page-content")
+                        });
+                        loading = false;
+                    } else {
+                        loading = false;
+                    }
+                },
+                error: function (output) {
+                    loading = false;
+                }
+            });
+            // 更新最后加载的序号
+            lastIndex = $$('.item_list').find('.is_li').length + 10;
+        }
+    });
+
+    function item_link(cur_link) {
+        localStorage.setItem('orders_scrolltop', $$('.page-content').scrollTop());
+        location.href = cur_link;
+    }
+    function compute_leftTime(time) {
+        var deadline = new Date(time);
+        var currentTime = new Date();
+        var leftTime = deadline.getTime() - currentTime.getTime();
+        var leftDays = Math.floor(leftTime/(24*3600*1000));
+        if(leftDays == 0) {
+            var leftHours = Math.floor(leftTime/(3600*1000));
+            if(leftHours == 0) {
+                var leftMinutes = Math.floor(leftTime/(60*1000));
+                if(leftMinutes == 0) {
+                    var leftSeconds = Math.floor(leftTime/1000);
+                    if(leftSeconds == 0) {
+                        return "已截止";
+                    }
+                    return leftMinutes + "秒";
+                }
+                return leftMinutes + "分钟";
+            }
+            return leftHours + "小时";
+        } else if(leftDays > 0) {
+            return leftDays + "天";
+        } else {
+            return "已截止";
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html style="position: static !important; height: auto !important;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Little</title>
+    <!--初始化样式-->
+    <link rel="stylesheet" href="/css/base.css"/>
+    <!--f7的样式-->
+    <link rel="stylesheet" href="/css/lib/framework7.ios.css"/>
+    <link rel="stylesheet" href="/css/lib/framework7.ios.colors.css"/>
+    <!--字体文件样式-->
+    <link rel="stylesheet" href="/css/lib/ionicons.css"/>
+    <!--自定义样式-->
+    <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="/css/lib/jquery-ui.css"/>
+</head>
+
+<body style="position: static !important; height: auto !important;">
+
+<div class="view view-main" id="activityDetail">
+    <div class="navbar navbar_none">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="javascript:history.go(-1);" class="link"><i class="icon icon_back"></i></a>
+            </div>
+            <div class="center">活动详情</div>
+            <div class="right">
+                <a class="external link icon-only open-share"><i class="icon icon-bars-blue"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="share share-btn " id="zh">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">分享到QQ空间</a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">分享到新浪微博</a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">分享到腾讯微博</a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">分享到微信</a>
+        </div>
+        <div class="guanbi">关闭</div>
+    </div>
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                内容加载中...
+            </p>
+        </div>
+    </div>
+    <div class="hint  on" style="display: none;">
+        <div class="hint-inner">
+            <div class="hint-title">温馨提示</div>
+            <div class="hint-text"></div>
+        </div>
+        <div class="hint-buttons modal-buttons-1 ">
+            <span class="hint-button hint-button-bold">OK</span>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="pages navbar-through">
+        <div data-page="activityDetail" class="page " style="position: static !important;">
+            <div class="page-content infinite-scroll page-gap">
+                <div class="swiper-container ">
+                    <div class="swiper-wrapper">
+                        {{#.}}
+                            {{#with detail}}
+                                {{#each slidePictures }}
+                                    <div class="swiper-slide">
+                                        <img src="{{this}}"/>
+                                    </div>
+                                {{/each}}
+                            {{/with}}
+                        {{/.}}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="detail-info">
+                    {{#.}}
+                        {{#with detail}}
+                            <div class="details-infotitle">
+                                <span class="cur_title">{{title}}</span>
+                            </div>
+                            <div class="details-age">
+                                <p>适用年龄：<cite>{{beginAge}}-{{endAge}}岁</cite></p>
+                                <span>
+                                </span>
+                            </div>
+                            <div class="details-ability">
+                                <i></i><span>{{tags}}</span>
+                            </div>
+                        {{/with}}
+                    {{/.}}
+                </div>
+                <div class="detail-mem  show_vip">
+                    <div class="mems-cotent">
+                        <p>
+                            成为会员--------------------。</p><a class="external mems bchy">注册</a>
+                    </div>
+                </div>
+                <div class="details-tab">
+                    <div class="buttons-row">
+                        <a href="#toypara" name="toypara" class="tab-link button active canshu">活动详情</a>
+                        <a href="#toyintro" name="toyintro" class="tab-link button jianjie ">品牌简介</a>
+                        <input id="commentCount" type="hidden" value="">
+                        <span id="commentSum"></span></a>
+                    </div>
+                    <div class="tabs " style="width: 100%;">
+                        <div class=" active " id="toypara">
+                            <div class="content-block">
+                                <div class="details-title">基本信息</div>
+                                <table class="baseParameters" border="0" cellspacing="0" cellpadding="0">
+                                    {{#.}}
+                                        {{#with detail}}
+                                            <tr>
+                                                <th>活动时间</th>
+                                                <td class="actTime">{{convert_date time}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>活动地点</th>
+                                                <td>{{site}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>活动人数</th>
+                                                <td>{{limitNum}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>活动价格</th>
+                                                <td>{{price}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>注意事项</th>
+                                                <td>{{note}}</td>
+                                            </tr>
+                                        {{/with}}
+                                    {{/.}}
+                                </table>
+                                <div class="toypara-ability">
+                                    <ul>
+                                        <li class="recommend_reason">
+                                            <div class="parability-title">详细信息</div>
+                                            <div class="parability-content" id="D_ability_desc">
+                                                {{#.}}
+                                                    {{#with detail}}
+                                                        {{{detailInfo}}}
+                                                    {{/with}}
+                                                {{/.}}
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="parability-title">展示</div>
+                                            <div style="word-wrap:break-word;text-align: left;"
+                                                 class="parability-content" id="D_display_list">
+                                                {{#.}}
+                                                    {{#with detail}}
+                                                        {{#each detailPics }}
+                                                            <img src="{{this}}"/>
+                                                        {{/each}}
+                                                    {{/with}}
+                                                {{/.}}
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="" id="toyintro">
+                            <div class="content-block">
+                                <div class="details-title">品牌简介</div>
+                                <div class="toyintro-detail">
+                                    {{#.}}
+                                        {{#with detail}}
+                                            {{#each brandIntro }}
+                                                <div class="toyintro-pic cur_brand_logo"><img src="{{this}}"/></div>
+                                            {{/each}}
+                                            <p class="cur_brand_desc">{{brandDesc}}</p>
+                                        {{/with}}
+                                    {{/.}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="detail-bottom">
+                <!--<div class="concern"><a href="wishes.html" class="link external"><span class="icon"><i
+                        class="badge bg_white">0</i></span>
+                    <p>箱</p></a></div>
+                <div class="cart"><a href="feedback.html" class="link external"><span class="CartNum"></span>
+                    <p>客服</p></a></div>-->
+                <div class="register"><a href="#" class="enter">报名</a></div>
+            </footer>
+            <div class="tips tishi_class" style="display: none">加入-----<i class="icon_tips"></i></div>
+            <div class="mask"></div>
+            <div id="getup" style="display: none;"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/lib/jquery-1.11.1.js"></script>
+<!--lodash基础类-->
+<script type="text/javascript" src="/js/lib/lodash.js"></script>
+<!--f7-->
+<script type="text/javascript" src="/js/lib/framework7.min.js"></script>
+<!--require.js-->
+<script data-main="js/main" src="/js/lib/require.js"></script>
+<!--自定义的定数-->
+<script type="text/javascript" src="/js/contant.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="/js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/lib/mui.min.js" charset="utf-8"></script>
+<script>
+    $(function () {
+        setTimeout(function () {
+            $('.tishi_class').hide();
+        }, 5000);
+    });
+
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "1",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "24"
+        },
+        "share": {}
+    };
+    with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(decodeURI(r[2]));
+        return null; //返回参数值
+    }
+</script>
+
+</body>
+
+</html>
