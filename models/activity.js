@@ -1,7 +1,3 @@
-var mongodb = require('./db');
-var async = require('async');
-var mongoose = require('mongoose');
-
 var ActivityModel = require('./ActivityModel');
 
 function Activity(activity) {

@@ -4,10 +4,6 @@ var router = express.Router();
 var crypto = require('crypto'),
     User = require('../models/user.js');
 
-var mongoose = require('mongoose');
-var settings = require('../settings');
-mongoose.connect('mongodb://' + settings.host + '/' + settings.db);
-
 router.get('/', function(req, res) {
     res.render('register', { title: 'Register' });
 });

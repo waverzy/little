@@ -19,6 +19,9 @@ var mine = require('./routes/mine');
 var userInfo = require('./routes/userInfo');
 var orderManage = require('./routes/orderManage');
 
+var mongoose = require('mongoose');
+mongoose.connect(settings.url);
+
 var app = express();
 
 // view engine setup

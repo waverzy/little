@@ -1,6 +1,4 @@
 module.exports = {
   cookieSecret: 'little',
-  db: 'little',
-  host: 'localhost',
-  port: 27017
+  url: 'mongodb://admin:admin@ds057386.mlab.com:57386/little'
 };
