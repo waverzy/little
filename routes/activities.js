@@ -8,7 +8,7 @@ var Activity = require('../models/activity.js');
 //mongoose.connect('mongodb://' + settings.host + '/' + settings.db);
 
 router.get('/', function(req, res) {
-    /*var newActivity = new Activity({
+    var newActivity = new Activity({
         title: '行走中的课题',
         time: '2016/10/09 09:30:00',
         mainPicture: 'https://img30.360buyimg.com/cf/jfs/t3019/168/1591355864/25217/681c2e62/57c7a575Nff9688b2.jpg',
@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
         limitNum: 30,
         currentNum: 10,
         price: 100,
-        slidePictures: ['http://share.baidu.com/static/web/img/imagesharepreview.jpg?v=fc1dee9c.jpg', 'http://share.baidu.com/static/web/img/imagesharepreview.jpg?v=fc1dee9c.jpg', 'http://share.baidu.com/static/web/img/imagesharepreview.jpg?v=fc1dee9c.jpg'],
+        slidePictures: ['https://cdn.atlassbx.com/FB/11087208966010/AZR_FY17-welcome-EN_US_300x250_BAN_Sept-16.png', 'https://cdn.atlassbx.com/FB/11087208966010/AZR_FY17-welcome-EN_US_300x250_BAN_Sept-16.png', 'https://cdn.atlassbx.com/FB/11087208966010/AZR_FY17-welcome-EN_US_300x250_BAN_Sept-16.png'],
         site: '上海市静安区zhabei路',
         note: 'notenotenotenote',
         deadline: '2016/10/08 09:30:00',
@@ -32,7 +32,7 @@ router.get('/', function(req, res) {
         if (err) {
             console.log(err);
         }
-    })*/
+    })
     res.render('activities');
 });
 

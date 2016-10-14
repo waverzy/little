@@ -58,7 +58,8 @@ app.use(cookieParser());
 app.use(express.static(__dirname));
 
 app.use(session({
-  secret: settings.cookieSecret
+  secret: settings.cookieSecret,
+  url: settings.url
 }));
 
 app.use('/', router);
