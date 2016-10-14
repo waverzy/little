@@ -57,7 +57,7 @@ Activity.prototype.save = function(callback) {
 
 Activity.getAll = function(skip, limit, callback) {
     ActivityModel.count(function(err, count) {
-        ActivityModel.find({}, null, {skip: skip, limit: limit},function (err, activities) {
+        ActivityModel.find({}, null, {skip: parseInt(skip, 10), limit: parseInt(limit, 10)}, function (err, activities) {
             if(err) {
                 return callback(err);
             }
