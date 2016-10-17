@@ -217,7 +217,7 @@
 .navbar .left a i.icon_back {
   width: 1em;
   height: 1em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_arrows.png") no-repeat 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_arrows.png") no-repeat 0;
   background-size: cover;
   left: 6px;
   top: 12px;
@@ -236,7 +236,7 @@
 .navbar .left a i.icon_goback {
   width: 1em;
   height: 1em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_arrows.png") no-repeat 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_arrows.png") no-repeat 0;
   background-size: cover;
   left: 6px;
   top: 12px;
@@ -275,7 +275,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: url("https://o6zo3xy1k.bkt.clouddn.com/status.gif");
+  background-image: url("http://o6zo3xy1k.bkt.clouddn.com/status.gif");
   background-size: 64px 64px;
   background-repeat: no-repeat;
   background-position: center;
@@ -388,7 +388,7 @@
   display: inline-block;
   width: 1.4em;
   height: 0.8em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_arrows.png") no-repeat -8px 0px;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_arrows.png") no-repeat -8px 0px;
   background-size: cover;
 }
 #index_navbar .left a {
@@ -411,7 +411,7 @@
   display: inline-block;
   min-width: 1.8em;
   height: 1.8em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_problem.png") no-repeat 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_problem.png") no-repeat 0;
   background-size: 100%;
 }
 #index_navbar .searchbar {
@@ -479,19 +479,19 @@
   margin-left: 30%;
 }
 .page_index .page-content .operate ul li i.icon_op1 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_op11.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_op11.png") no-repeat center center;
   background-size: cover;
 }
 .page_index .page-content .operate ul li i.icon_op2 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_op21.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_op21.png") no-repeat center center;
   background-size: cover;
 }
 .page_index .page-content .operate ul li i.icon_op3 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_op31.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_op31.png") no-repeat center center;
   background-size: cover;
 }
 .page_index .page-content .operate ul li i.icon_op4 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_op41.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_op41.png") no-repeat center center;
   background-size: cover;
 }
 .page_index .page-content .choose {
@@ -649,25 +649,25 @@
 .toolbar .toolbar-inner .demo-icon-1 {
   width: 1.6em;
   height: 1.6em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_footer_home1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_footer_home1.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .demo-icon-2 {
   width: 1.6em;
   height: 1.6em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_choosetoy1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_choosetoy1.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .demo-icon-3 {
   width: 1.6em;
   height: 1.6em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_toystore1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_toystore1.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .demo-icon-5 {
   width: 1.6em;
   height: 1.6em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_footer_mine1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_footer_mine1.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .demo-icon-5 span.small-badge {
@@ -678,19 +678,19 @@
   margin-left: -4px;
 }
 .toolbar .toolbar-inner .active .demo-icon-1 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_footer_home1R.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_footer_home1R.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .active .demo-icon-2 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_choosetoy1R.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_choosetoy1R.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .active .demo-icon-3 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_toystore1R.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_toystore1R.png") no-repeat;
   background-size: 100%;
 }
 .toolbar .toolbar-inner .active .demo-icon-5 {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_footer_mine1R.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_footer_mine1R.png") no-repeat;
   background-size: 100%;
 }
 .toolbar a.tab-link.red_circle {
@@ -793,7 +793,7 @@
 .thematicDetails_page .navbar .left i.icon_goback {
   width: 1.2rem;
   height: 1.8rem;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_goback.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_goback.png") no-repeat center center;
   background-size: cover;
 }
 /*=================宝宝Party----->主页=======================*/
@@ -938,15 +938,15 @@
   line-height: 30px;
 }
 #activityDetail .share-friend .share-friend-list a.sf-weixin {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_friends.png") no-repeat left;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_friends.png") no-repeat left;
   background-size: 20%;
 }
 #activityDetail .share-friend .share-friend-list a.sf-wechat {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_wechat.png") no-repeat left;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_wechat.png") no-repeat left;
   background-size: 20%;
 }
 #activityDetail .share-friend .share-friend-list a.sf-weibo {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_microblog.png") no-repeat left;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_microblog.png") no-repeat left;
   background-size: 20%;
 }
 #activityDetail .share-friend .guanbi {
@@ -963,7 +963,7 @@
   margin: 5px auto;
 }
 #activityDetail .navbar .navbar-inner .right {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_share.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_share.png") no-repeat center;
   width: 1.6em;
   height: 1.6em;
   background-size: 88%;
@@ -995,14 +995,14 @@
   color: #ff4965;
 }
 #activityDetail .detail-bottom .concern a.on span {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_wishred.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_wishred.png") no-repeat center;
   background-size: 30%;
 }
 #activityDetail .detail-bottom .concern a span {
   width: 2em;
   height: 26px;
   display: block;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_toystore1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_toystore1.png") no-repeat center;
   background-size: 100%;
   margin: 0 auto;
   position: relative;
@@ -1034,7 +1034,7 @@
   width: 2em;
   height: 26px;
   display: block;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_helpblack.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_helpblack.png") no-repeat center;
   background-size: 100%;
   overflow: hidden;
   position: relative;
@@ -1190,7 +1190,7 @@
 #activityDetail .page .page-content .detail-info .details-ability i {
   width: 14px;
   height: 22px;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_ability.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_ability.png") no-repeat center;
   background-size: 100%;
   display: inline-block;
   float: left;
@@ -1366,7 +1366,7 @@
   margin-right: 6px;
   margin-bottom: -3px;
   display: inline-block;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-evaluate.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-evaluate.png") no-repeat center;
   background-size: cover;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .use-evaluate i {
@@ -1415,7 +1415,7 @@
   width: 20px;
   height: 18px;
   display: inline-block;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/person.png") no-repeat 10px 0px;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/person.png") no-repeat 10px 0px;
   background-size: cover;
   float: left;
 }
@@ -1424,7 +1424,7 @@
   margin-left: 10px;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-infos .toyjudge-particular cite.pregnant {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pregnant.png") no-repeat 10px center !important;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pregnant.png") no-repeat 10px center !important;
   background-size: 50% !important;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-infos .toyjudge-particular span {
@@ -1459,7 +1459,7 @@
   width: 20px;
   height: 24px;
   display: inline-block;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/person.png") no-repeat 10px 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/person.png") no-repeat 10px 0;
   background-size: cover;
   float: left;
 }
@@ -1468,7 +1468,7 @@
   margin-left: 10px;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-left cite.pregnant {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pregnant.png") no-repeat 10px center !important;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pregnant.png") no-repeat 10px center !important;
   background-size: 50% !important;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-star {
@@ -1478,7 +1478,7 @@
   margin-left: .25em;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-star ul.toy-starbg {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 -15px repeat-x;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 -15px repeat-x;
   background-size: 20%;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-star ul.toy-star {
@@ -1492,7 +1492,7 @@
   border: 0;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li .toyjudge-title .toyjudge-star ul li.on {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 0 no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 0 no-repeat;
   background-size: 100%;
 }
 #activityDetail .page .page-content .details-tab .tabs #toyjudge .content-block .toyjudge-content ul li.is_li p {
@@ -1541,7 +1541,7 @@
   color: white;
 }
 #activityDetail .tips i.icon_tips {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/tips.png") no-repeat center bottom;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/tips.png") no-repeat center bottom;
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -1557,7 +1557,7 @@
   font-size: 2em;
   text-align: center;
   border-radius: 2px;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_getup.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_getup.png") no-repeat;
   background-size: 100%;
   color: white;
   position: fixed;
@@ -1742,7 +1742,7 @@
   width: 32px;
   height: 32px;
   display: inline-block;
-  background: #57524d url("https://o6zo3xy1k.bkt.clouddn.com/icon_closes.png") no-repeat center;
+  background: #57524d url("http://o6zo3xy1k.bkt.clouddn.com/icon_closes.png") no-repeat center;
   background-size: 56%;
   float: left;
   display: none;
@@ -1836,7 +1836,7 @@
   width: 15%;
 }
 #goods_box .item-inner-bottom span.add_wish i {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_wishred.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_wishred.png") no-repeat center center;
   display: inline-block;
   width: 2.4em;
   height: 2.4em;
@@ -1844,7 +1844,7 @@
   float: right;
 }
 #goods_box .item-inner-bottom span.add_wish i.on {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_wish.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_wish.png") no-repeat center center;
   background-size: contain;
 }
 #goods_box .item-inner-bottom span i {
@@ -1886,14 +1886,14 @@
   border-bottom: none;
 }
 #goods_box .button i.icon_up {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/up.png") no-repeat center 2px;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/up.png") no-repeat center 2px;
   display: inline-block;
   width: 16px;
   height: 10px;
   background-size: 10px;
 }
 #goods_box .button i.icon_down {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/down.png") no-repeat center 2px;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/down.png") no-repeat center 2px;
   background-size: 10px;
   width: 16px;
   height: 10px;
@@ -2001,7 +2001,7 @@
   width: 100%;
   height: 24px;
   float: left;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_goback.png") no-repeat 0 center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_goback.png") no-repeat 0 center;
   background-size: 20%;
 }
 .searchbar .searchbar-input {
@@ -2079,7 +2079,7 @@
   display: inline-block;
   width: 1.4em;
   height: 1.4em;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_search.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_search.png") no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 10px;
@@ -2095,7 +2095,7 @@
   display: inline-block;
   width: 1.8rem;
   height: 1.8rem;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/delete_icon.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/delete_icon.png") no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 10px;
@@ -2105,7 +2105,7 @@
   display: inline-block;
   width: 1.6rem;
   height: 1.6rem;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_star.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_star.png") no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 10px;
@@ -2209,7 +2209,7 @@
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_label.png") no-repeat 0 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_label.png") no-repeat 0 0;
   background-size: cover;
   position: absolute;
   top: 6px;
@@ -2289,7 +2289,7 @@
   color: #fd6a7b;
 }
 #mine .navbar-inner .right a {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/message_pink.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/message_pink.png") no-repeat center;
   width: 50px;
   height: 30px;
   display: inline-block;
@@ -2315,7 +2315,7 @@
   background-color: #fff;
 }
 #mine .mine-top .mine_title {
-  background: #fff url('https://picapi.zhituad.com/photo/44/52/46FAD.jpg') no-repeat 96% center;
+  background: #fff url('http://picapi.zhituad.com/photo/44/52/46FAD.jpg') no-repeat 96% center;
   background-size: cover;
   padding: 3%;
   border: 1px #ccc solid;
@@ -2382,11 +2382,11 @@
   margin: 8px 5px 0 0;
 }
 #mine .mine-icon ul li a .mine_btn i.icon_myorder {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-myorder1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-myorder1.png") no-repeat center;
   background-size: cover;
 }
 #mine .mine-icon ul li a .mine_btn i.icon_myconcern {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-mymem1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-mymem1.png") no-repeat center;
   background-size: cover;
 }
 #mine .mine-icon ul li a .mine_btn span {
@@ -2431,7 +2431,7 @@
 #mine .mine_wallet .mine_order ul li .icon_order,
 #mine .mine_wallet .mine_set ul li .icon_order,
 #mine .mine_wallet .mine_help ul li .icon_order {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_remark1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_remark1.png") no-repeat center;
   background-size: 80%;
   width: 30px;
   height: 30px;
@@ -2464,38 +2464,38 @@
 #mine .mine_wallet .mine_set .icon_mine_set,
 #mine .mine_wallet .mine_set .icon_mine_consume,
 #mine .mine_wallet .mine_set .icon_mine_cheap {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_address1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_address1.png") no-repeat center;
   background-size: 96%;
   width: 30px;
   height: 30px;
 }
 #mine .mine_wallet .mine_set .icon_mine_consume {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_consume1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_consume1.png") no-repeat center;
   background-size: 80%;
 }
 #mine .mine_wallet .mine_set .icon_mine_share {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_share1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_share1.png") no-repeat center;
   background-size: 80%;
 }
 #mine .mine_wallet .mine_set .icon_mine_set {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_set1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_set1.png") no-repeat center;
   background-size: 80%;
 }
 #mine .mine_wallet .mine_set .icon_mine_cheap {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_cheap1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_cheap1.png") no-repeat center;
   background-size: 80%;
 }
 #mine .mine_wallet .mine_help {
   margin-bottom: 2%;
 }
 #mine .mine_wallet .mine_help .icon_mine_help {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_help1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_help1.png") no-repeat center;
   background-size: 80%;
   width: 30px;
   height: 30px;
 }
 #mine .mine_wallet .mine_help .icon_mine_about {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/mine_about1.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/mine_about1.png") no-repeat center;
   background-size: 80%;
   width: 30px;
   height: 30px;
@@ -2555,7 +2555,7 @@
 }
 #userInfo .data_input .input_nickname .icon_phone,
 #userInfo .data_input .input_name .icon_phone {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-phone.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-phone.png") no-repeat center;
   background-size: 60%;
   width: 30px;
   height: 30px;
@@ -2563,7 +2563,7 @@
 }
 #userInfo .data_input .input_nickname .icon_calendar,
 #userInfo .data_input .input_name .icon_calendar {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/calendar.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/calendar.png") no-repeat center;
   background-size: 60%;
   width: 30px;
   height: 30px;
@@ -2590,12 +2590,12 @@
 }
 #userInfo .date_sex .sex_label li label input[type="radio"]:checked ~ .radio_boy,
 #userInfo .date_sex .sex_label li label input[type="radio"]:checked ~ .radio_girl {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_checked.png") no-repeat 90% 6%;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_checked.png") no-repeat 90% 6%;
   background-size: 24%;
   z-index: 9;
 }
 #userInfo .date_sex .sex_label li label .icon_boy {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/data_boy.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/data_boy.png") no-repeat center;
   background-size: 80%;
   width: 138px;
   height: 138px;
@@ -2603,7 +2603,7 @@
   z-index: -1;
 }
 #userInfo .date_sex .sex_label li label .icon_girl {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/data_girl.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/data_girl.png") no-repeat center;
   background-size: 80%;
   width: 138px;
   height: 138px;
@@ -2669,13 +2669,13 @@
   position: relative;
 }
 #message .page .message_list ul li .item-media .icon_message {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/message.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/message.png") no-repeat;
   background-size: 80%;
   width: 30px;
   height: 30px;
 }
 #message .page .message_list ul li .item-media .icon_message_pink {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/message_pink.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/message_pink.png") no-repeat center;
   background-size: 80%;
   width: 30px;
   height: 30px;
@@ -2981,7 +2981,7 @@
 }
 #evaluateSingle .single_content ul.toy-starbg,
 #evaluateDetail .single_content ul.toy-starbg {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 -26px repeat-x;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 -26px repeat-x;
   background-size: 20%;
 }
 #evaluateSingle .single_content ul.toy-star,
@@ -2997,7 +2997,7 @@
 }
 #evaluateSingle .single_content ul li.on,
 #evaluateDetail .single_content ul li.on {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 0 no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-star.png") 0 0 no-repeat;
   background-size: 100%;
 }
 #evaluateSingle .single_textarea,
@@ -3112,7 +3112,7 @@
   color: #ff4965;
 }
 #orderPay .page-content .orderpay-cash .list-block ul li.orderpay-code {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/right_arrow.png") no-repeat 98% center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/right_arrow.png") no-repeat 98% center;
   background-size: 3%;
 }
 #orderPay .page-content .orderpay-cash .list-block ul li.orderpay-code .item-title-row .item-title {
@@ -3159,11 +3159,11 @@
 #orderPay .page-content .orderpay-way .list-block ul li .item-content .item-media {
   width: 28px;
   height: 28px;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pay.png") no-repeat -33px 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pay.png") no-repeat -33px 0;
   background-size: cover;
 }
 #orderPay .page-content .orderpay-way .list-block ul li .item-content .item-media.zfbpay {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pay.png") no-repeat 0 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pay.png") no-repeat 0 0;
   background-size: cover;
 }
 #orderPay .page-content .orderpay-way .list-block ul li .item-content .item-inner {
@@ -3179,7 +3179,7 @@
   -webkit-appearance: none;
   width: 26px;
   height: 26px;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-radio.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-radio.png") no-repeat;
   background-size: 100%;
 }
 #orderPay .page-content .orderpay-way .list-block ul li .item-content .item-inner .item-title-row .item-after input.check {
@@ -3248,37 +3248,37 @@
   line-height: 2.4;
 }
 #helpFeedback .helpFeedback_list ul li .item-media .icon_point {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/helpFeedback_point.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/helpFeedback_point.png") no-repeat center;
   background-size: 100%;
   width: 26px;
   height: 26px;
 }
 #helpFeedback .helpFeedback_list ul li .item-media .icon_privilege {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/helpFeedback_privilege.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/helpFeedback_privilege.png") no-repeat center;
   background-size: 100%;
   width: 26px;
   height: 26px;
 }
 #helpFeedback .helpFeedback_list ul li .item-media .icon_order_problem {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/helpFeedback_order_problem.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/helpFeedback_order_problem.png") no-repeat center;
   background-size: 90%;
   width: 26px;
   height: 26px;
 }
 #helpFeedback .helpFeedback_list ul li .item-media .icon_logistics_problem {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/helpFeedback_logistics_problem.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/helpFeedback_logistics_problem.png") no-repeat center;
   background-size: 90%;
   width: 26px;
   height: 26px;
 }
 #helpFeedback .helpFeedback_list ul li .item-media .icon_service_problem {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/helpFeedback_service_problem.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/helpFeedback_service_problem.png") no-repeat center;
   background-size: 60%;
   width: 26px;
   height: 26px;
 }
 #helpFeedback .helpFeedback_list ul li .item-media .icon_feedback {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/helpFeedback_feedback.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/helpFeedback_feedback.png") no-repeat center;
   background-size: 70%;
   width: 26px;
   height: 26px;
@@ -3321,19 +3321,19 @@
   line-height: 2.4;
 }
 #settings .settings_list ul li .item-media .icon_change_password {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/settings_change_password.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/settings_change_password.png") no-repeat center;
   background-size: 100%;
   width: 30px;
   height: 30px;
 }
 #settings .settings_list ul li .item-media .icon_wipe_cache {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/settings_wipe_cache.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/settings_wipe_cache.png") no-repeat center;
   background-size: 100%;
   width: 30px;
   height: 30px;
 }
 #settings .settings_list ul li .item-media .icon_service_tel {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/settings_service_tel.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/settings_service_tel.png") no-repeat center;
   background-size: 100%;
   width: 30px;
   height: 30px;
@@ -3380,15 +3380,15 @@
   height: 20px;
 }
 #forgetPassword .page-content .password-info .list-block ul li .item-content .item-media.psword-phone {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psphoe1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psphoe1.png") no-repeat;
   background-size: 100%;
 }
 #forgetPassword .page-content .password-info .list-block ul li .item-content .item-media.psword-code {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pscode1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pscode1.png") no-repeat;
   background-size: 100%;
 }
 #forgetPassword .page-content .password-info .list-block ul li .item-content .item-media.psword-mima {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
   background-size: 100%;
 }
 #forgetPassword .page-content .password-info .list-block ul li .item-content .item-inner {
@@ -3426,7 +3426,7 @@
   line-height: 30px;
 }
 #forgetPassword .page-content .password-info .list-block ul li .item-content .item-inner .item-after {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
   background-size: 100%;
   width: 16px;
   height: 16px;
@@ -3468,11 +3468,11 @@
   height: 20px;
 }
 #changePassword .page-content .password-info .list-block ul li .item-content .item-media.psword-phone {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
   background-size: 100%;
 }
 #changePassword .page-content .password-info .list-block ul li .item-content .item-media.psword-mima {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
   background-size: 100%;
 }
 #changePassword .page-content .password-info .list-block ul li .item-content .item-inner {
@@ -3510,7 +3510,7 @@
   line-height: 30px;
 }
 #changePassword .page-content .password-info .list-block ul li .item-content .item-inner .item-after {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
   background-size: 100%;
   width: 16px;
   height: 16px;
@@ -3556,11 +3556,11 @@
   height: 20px;
 }
 #login .page-content .login-info .list-block ul li .item-content .item-media.psword-phone {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psphoe1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psphoe1.png") no-repeat;
   background-size: 100%;
 }
 #login .page-content .login-info .list-block ul li .item-content .item-media.psword-code {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
   background-size: 100%;
 }
 #login .page-content .login-info .list-block ul li .item-content .item-inner {
@@ -3600,7 +3600,7 @@
   color: #ff4965;
 }
 #login .page-content .login-info .list-block ul li .item-content .item-inner .item-after {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
   background-size: 100%;
   width: 16px;
   height: 16px;
@@ -3657,7 +3657,7 @@
   height: 42px;
   margin: 0 auto;
   display: block;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_weixin.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_weixin.png") no-repeat;
   background-size: 100%;
 }
 #login .page-content .chat-login {
@@ -3712,19 +3712,19 @@
   height: 20px;
 }
 #register .page-content .register-info .list-block ul li .item-content .item-media.img-phone {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psphoe1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psphoe1.png") no-repeat;
   background-size: 100%;
 }
 #register .page-content .register-info .list-block ul li .item-content .item-media.img-code {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pscode1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pscode1.png") no-repeat;
   background-size: 100%;
 }
 #register .page-content .register-info .list-block ul li .item-content .item-media.img-password {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_psmima1.png") no-repeat;
   background-size: 100%;
 }
 #register .page-content .register-info .list-block ul li .item-content .item-media.reg-friend {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_regfriend1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_regfriend1.png") no-repeat;
   background-size: 100%;
 }
 #register .page-content .register-info .list-block ul li .item-content .item-media.psword-codeimg {
@@ -3766,7 +3766,7 @@
   line-height: 30px;
 }
 #register .page-content .register-info .list-block ul li .item-content .item-inner .item-after {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_remove.png") no-repeat;
   background-size: 100%;
   width: 16px;
   height: 16px;
@@ -3801,7 +3801,7 @@
   height: 20px;
   display: inline-block;
   float: left;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_read.png") no-repeat 0 -22px;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_read.png") no-repeat 0 -22px;
   background-size: 100%;
   margin-top: 4px;
 }
@@ -3955,25 +3955,25 @@
   color: #000;
 }
 #shareFriend .share_content .share li a .icon_share_wechat {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_wechat.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_wechat.png") no-repeat center;
   background-size: 100%;
   width: 40px;
   height: 40px;
 }
 #shareFriend .share_content .share li a .icon_share_friends {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_friends.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_friends.png") no-repeat center;
   background-size: 100%;
   width: 40px;
   height: 40px;
 }
 #shareFriend .share_content .share li a .icon_share_microblog {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_microblog.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_microblog.png") no-repeat center;
   background-size: 100%;
   width: 40px;
   height: 40px;
 }
 #shareFriend .share_content .share li a .icon_share_QRcode {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/share_QRcode.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/share_QRcode.png") no-repeat center;
   background-size: 100%;
   width: 40px;
   height: 40px;
@@ -4030,7 +4030,7 @@
   line-height: 3;
 }
 #aboutUs .about_content .about_license .license_title .icon_about_license {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/about_label.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/about_label.png") no-repeat center;
   background-size: 80%;
   width: 20px;
   height: 20px;
@@ -4094,23 +4094,23 @@
   height: 30px;
 }
 #help .page-content .list-block ul li a .item-media.icon-question {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-question1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-question1.png") no-repeat;
   background-size: 100%;
 }
 #help .page-content .list-block ul li a .item-media.icon-scope {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-scope1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-scope1.png") no-repeat;
   background-size: 100%;
 }
 #help .page-content .list-block ul li a .item-media.icon-msg {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-msg1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-msg1.png") no-repeat;
   background-size: 100%;
 }
 #help .page-content .list-block ul li a .item-media.icon-weixin {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-weixin1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-weixin1.png") no-repeat;
   background-size: 100%;
 }
 #help .page-content .list-block ul li a .item-media.icon-phone {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon-phone.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon-phone.png") no-repeat;
   background-size: 100%;
 }
 #help .page-content .list-block ul li a .item-inner {
@@ -4295,7 +4295,7 @@
   white-space: nowrap;
 }
 #wishes .page-content .wishes-content .list-block ul li .item-content .item-inner .item-inner-bottom .item-icon {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_wishred.png") no-repeat center center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_wishred.png") no-repeat center center;
   display: inline-block;
   width: 1.8em;
   height: 1.8em;
@@ -4401,7 +4401,7 @@
   width: 100px;
   height: 43px;
   z-index: 10000;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/sdown.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/sdown.png") no-repeat center;
   background-size: 100%;
 }
 #sort .up {
@@ -4412,7 +4412,7 @@
   left: 50%;
   margin-left: -50px;
   z-index: 10000;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/sup.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/sup.png") no-repeat;
   background-size: 100%;
 }
 #sort .sort-content {
@@ -4514,7 +4514,7 @@
   padding-left: 8px;
 }
 #pay .page-content .pay-content .pay-contentinfo ul li .item-content .item-media {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pays.png") no-repeat right;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pays.png") no-repeat right;
   background-size: cover;
   width: 20px;
   height: 20px;
@@ -4630,7 +4630,7 @@
 #pay .page-content .pay-content .rent-way a {
   width: 138px;
   color: #333;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/right_arrow.png") no-repeat right 1px;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/right_arrow.png") no-repeat right 1px;
   background-size: 12%;
   display: block;
   font-size: 1.2rem;
@@ -4986,11 +4986,11 @@
   margin: 8px 6px 0 0;
 }
 #currentToy .page-content .tabs #current .current-other a .current-btn i.current-change {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_change.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_change.png") no-repeat center;
   background-size: 100%;
 }
 #currentToy .page-content .tabs #current .current-other a .current-btn i.current-comment {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_next.png") no-repeat center;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_next.png") no-repeat center;
   background-size: 100%;
 }
 #currentToy .page-content .tabs #current .current-other a .current-btn span {
@@ -5198,7 +5198,7 @@
 #myCoupon .history li {
   margin: 3%;
   padding-bottom: 2%;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/usable.png") no-repeat 0 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/usable.png") no-repeat 0 0;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -5233,7 +5233,7 @@
   margin: 2% 0;
 }
 #myCoupon .history li {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/history.png") no-repeat 0 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/history.png") no-repeat 0 0;
   background-size: 100%;
 }
 #myCoupon .history li .usable_title .col-40 {
@@ -5316,7 +5316,7 @@
 #coupon .history li {
   margin: 3%;
   padding-bottom: 2%;
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/usable.png") no-repeat 0 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/usable.png") no-repeat 0 0;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -5351,7 +5351,7 @@
   margin: 2% 0;
 }
 #coupon .history li {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/history.png") no-repeat 0 0;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/history.png") no-repeat 0 0;
   background-size: 100%;
 }
 #coupon .history li .usable_title .col-40 {
@@ -5464,19 +5464,19 @@
   border-top: 1px solid #ccc;
 }
 .first_login .login-info .wxlogin_list ul li .item-content .psword-code {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/wx-sex.png") no-repeat !important;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/wx-sex.png") no-repeat !important;
   background-size: 100% !important;
 }
 .first_login .login-info .wxlogin_list ul li .item-content .psword-calendar {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/wx-calendar.png") no-repeat !important;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/wx-calendar.png") no-repeat !important;
   background-size: 100% !important;
 }
 .first_login .login-info .wxlogin_list ul li .item-content .pswor-code {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/wx-code.png") no-repeat !important;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/wx-code.png") no-repeat !important;
   background-size: 100% !important;
 }
 .first_login .login-info .wxlogin_list ul li .item-content .psword-infoCode {
-  background: url("https://o6zo3xy1k.bkt.clouddn.com/icon_pscode1.png") no-repeat;
+  background: url("http://o6zo3xy1k.bkt.clouddn.com/icon_pscode1.png") no-repeat;
   background-size: 100%;
 }
 .first_login .login-info .wxlogin_list ul li .item-content .item-inner.yzm .item-title.label {
