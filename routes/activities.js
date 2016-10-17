@@ -8,7 +8,7 @@ var Activity = require('../models/activity.js');
 //mongoose.connect('mongodb://' + settings.host + '/' + settings.db);
 
 router.get('/', function(req, res) {
-    var newActivity = new Activity({
+    /*var newActivity = new Activity({
         title: '行走中的课题',
         time: '2016/10/09 09:30:00',
         mainPicture: 'https://img30.360buyimg.com/cf/jfs/t3019/168/1591355864/25217/681c2e62/57c7a575Nff9688b2.jpg',
@@ -32,7 +32,7 @@ router.get('/', function(req, res) {
         if (err) {
             console.log(err);
         }
-    })
+    })*/
     res.render('activities');
 });
 
