@@ -1,3 +1,5 @@
+"use strict";
+
 define(["main","userInfo/userInfoView"], function(app, thisview) {
 
     var bindings = [{
@@ -26,25 +28,33 @@ define(["main","userInfo/userInfoView"], function(app, thisview) {
                     type: 'query',
                     user_id: user_id
                 },
-                success: function(data_output){
-                    var userInfo = data_output.data.userInfo;
-                    var avatar = userInfo.avatar;
-                    if(avatar == null || avatar == '') {
-                        avatar = "http://o6zo3xy1k.bkt.clouddn.com/vip_portrait.png";
-                    }
-                    $('.vip_portrait').attr('src', avatar);
-                    $('input[name="nickname"]').val(userInfo.nickname);
-                    $('input[name="name"]').val(userInfo.name);
-                    $('.sex .item-after').text(userInfo.sex);
-                    $('.age .item-after').text(userInfo.age);
+                success: function(data_output) {
+                    if (data_output.msg == 'success') {
+                        var userInfo = data_output.data.userInfo;
+                        var avatar = userInfo.avatar;
+                        if (avatar == null || avatar == '') {
+                            avatar = "http://o6zo3xy1k.bkt.clouddn.com/vip_portrait.png";
+                        }
+                        $('.vip_portrait').attr('src', avatar);
+                        $('input[name="nickname"]').val(userInfo.nickname);
+                        $('input[name="name"]').val(userInfo.name);
+                        $('.sex .item-after').text(userInfo.sex);
+                        $('.age .item-after').text(userInfo.age);
 
-                    thisview.render({
-                        bindings: bindings
-                    });
-                } ,
+                        thisview.render({
+                            bindings: bindings
+                        });
+                    } else {
+                        app.f7.alert(data_output.msg, '温馨提示');
+                        localStorage.clear();
+                        localStorage.setItem(REGISTER_REFERER,'userInfo');
+                        setTimeout(function(){
+                            location.href = 'login';
+                        },2000);
+                    }
+                },
                 error: function(data_output) {
                     app.f7.alert('致命错误','温馨提示')
-                    console.log(data_output.data);
                 }
             });
         }
@@ -106,11 +116,12 @@ define(["main","userInfo/userInfoView"], function(app, thisview) {
                         }, 2000);
 
                     } else {
+                        localStorage.clear();
+                        localStorage.setItem(REGISTER_REFERER,'userInfo');
                         app.f7.alert(data_output.msg, '温馨提示');
-                        setTimeout(function () {
-                            app.f7.closeModal();
-                        }, 2000);
-                        console.log(data_output.data);
+                        setTimeout(function(){
+                            location.href = 'login';
+                        },2000);
                     }
                 },
                 error: function (data_output) {
@@ -118,7 +129,6 @@ define(["main","userInfo/userInfoView"], function(app, thisview) {
                     setTimeout(function () {
                         app.f7.closeModal();
                     }, 2000);
-                    console.log(data_output.data);
                 }
             });
         }
