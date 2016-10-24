@@ -16,6 +16,8 @@
     "mongodb": ">2.0.0",
     "async": "*",
     "express-session": "1.13.0",
-    "mongoose": "*"
+    "mongoose": "*",
+    "bluebird": "*",
+    "log4js": "*"
   }
 }

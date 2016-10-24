@@ -3,6 +3,9 @@ var router = express.Router();
 
 var Activity = require('../models/activity.js');
 
+var log4js = require('../js/utils/log4jsUtil.js'),
+    logger = log4js.getLogger();
+
 //var mongoose = require('mongoose');
 //var settings = require('../settings');
 //mongoose.connect('mongodb://' + settings.host + '/' + settings.db);
@@ -18,7 +21,7 @@ router.get('/', function(req, res) {
         limitNum: 30,
         currentNum: 10,
         price: 100,
-        slidePictures: ['https://cdn.atlassbx.com/FB/11087208966010/AZR_FY17-welcome-EN_US_300x250_BAN_Sept-16.png', 'https://cdn.atlassbx.com/FB/11087208966010/AZR_FY17-welcome-EN_US_300x250_BAN_Sept-16.png', 'https://cdn.atlassbx.com/FB/11087208966010/AZR_FY17-welcome-EN_US_300x250_BAN_Sept-16.png'],
+        slidePictures: ['http://share.baidu.com/static/web/img/imagesharepreview.jpg?v=fc1dee9c.jpg', 'http://share.baidu.com/static/web/img/imagesharepreview.jpg?v=fc1dee9c.jpg', 'http://share.baidu.com/static/web/img/imagesharepreview.jpg?v=fc1dee9c.jpg'],
         site: '上海市静安区zhabei路',
         note: 'notenotenotenote',
         deadline: '2016/10/08 09:30:00',
@@ -33,6 +36,7 @@ router.get('/', function(req, res) {
             console.log(err);
         }
     })*/
+    logger.info("into activities page");
     res.render('activities');
 });
 
@@ -46,8 +50,10 @@ router.post('/', function(req, res) {
         ability = req.body.ability;
     Activity.getAll(index, limit, function(err, activities, count) {
         if (err) {
+            logger.error("activities query error")
             return res.send({'msg': err});
         }
+        logger.info("activities query finished");
         return res.send({'msg': 'success', 'data': {'activities': activities, 'maxCount': count}});
     })
 });
